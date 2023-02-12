@@ -1,0 +1,81 @@
+package com.example.ssmp.controller;
+
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.ssmp.pojo.Book;
+import com.example.ssmp.utils.BaseClass;
+import com.example.ssmp.utils.Constant;
+import com.example.ssmp.utils.R;
+import com.example.ssmp.service.IBookService;
+import org.apache.logging.log4j.util.Strings;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
+import java.util.List;
+@RestController
+@RequestMapping("/books")
+public class BookController extends BaseClass {
+    @Autowired
+    private IBookService bookService;
+
+
+    @GetMapping
+    public R getAll(){
+        List<Book> books = bookService.list();
+        return new R(true ,books);
+    }
+
+    @PostMapping
+    public R save(@RequestBody Book book) throws IOException {
+        boolean flag = bookService.save(book);
+        return new R(flag , flag ? Constant.add_success:Constant.add_failed);
+    }
+
+    @PutMapping
+    public R update(@RequestBody Book book){
+        boolean flag = bookService.updateById(book);
+        return new R(flag , flag ? Constant.update_success:Constant.update_failed);
+    }
+
+    @DeleteMapping("{id}")
+    public R delete(@PathVariable Integer id){
+        boolean flag = bookService.removeById(id);
+        return new R(flag , flag ? Constant.delete_success:Constant.delete_failed);
+    }
+
+    @GetMapping("{id}")
+    public R getById(@PathVariable Integer id){
+        Book book = bookService.getById(id);
+        return new R(true , book);
+    }
+
+    @GetMapping("{currentPage}/{pageSize}")
+    public R getPage(@PathVariable int currentPage,@PathVariable int pageSize,Book book){
+        LambdaQueryWrapper<Book> lqw = new LambdaQueryWrapper<>();
+        lqw.like(Strings.isNotEmpty(book.getName()),Book::getName,book.getName());
+        lqw.like(Strings.isNotEmpty(book.getType()),Book::getType,book.getType());
+        lqw.like(Strings.isNotEmpty(book.getDescription()),Book::getDescription,book.getDescription());
+
+        IPage<Book> page = bookService.page(new Page(currentPage,pageSize),lqw);
+        if(currentPage > page.getPages()){
+            page = bookService.page(new Page((int)page.getPages(),pageSize),lqw);
+        }
+        return new R(true , page);
+    }
+
+    @GetMapping("/logFunc")
+    public String logFunc(){
+        log.trace("trace >>> ");
+        log.debug("debug ...");
+        log.info("info");
+        log.warn("warning");
+        log.error("!!!error");
+        return "test success";
+    }
+}

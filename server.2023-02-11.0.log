@@ -1,0 +1,39 @@
+2023-02-11 12:12:33.002  INFO 11008 --- [main] com.example.ssmp.SsmpApplication         : Starting SsmpApplication using Java 1.8.0_331 on LAPTOP-F4S35VFD with PID 11008 (C:\Users\Peiboring\Desktop\SpringBoot\code\ssmp\target\classes started by Peiboring in C:\Users\Peiboring\Desktop\SpringBoot\code\ssmp)
+2023-02-11 12:12:33.011  INFO 11008 --- [main] com.example.ssmp.SsmpApplication         : The following profiles are active: dev,devConfigurationProperties,devJdbcTemplate
+2023-02-11 12:12:33.051  INFO 11008 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-11 12:12:33.704  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-11 12:12:33.704  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-11 12:12:33.720  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2023-02-11 12:12:33.741  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-11 12:12:33.741  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-02-11 12:12:33.744  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 MongoDB repository interfaces.
+2023-02-11 12:12:33.754  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-11 12:12:33.755  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-11 12:12:33.764  INFO 11008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-02-11 12:12:34.219  INFO 11008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 83 (http)
+2023-02-11 12:12:34.229  INFO 11008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-11 12:12:34.229  INFO 11008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2023-02-11 12:12:34.318  INFO 11008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-11 12:12:34.318  INFO 11008 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1266 ms
+2023-02-11 12:12:34.436  INFO 11008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-11 12:12:34.603  INFO 11008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-11 12:12:34.640  INFO 11008 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-11 12:12:34.696  INFO 11008 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2023-02-11 12:12:34.830  INFO 11008 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-11 12:12:34.947  INFO 11008 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-02-11 12:12:35.097  INFO 11008 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-11 12:12:35.108  INFO 11008 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-11 12:12:35.854  WARN 11008 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-11 12:12:35.951  INFO 11008 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-11 12:12:36.335  INFO 11008 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2023-02-11 12:12:36.379  INFO 11008 --- [cluster-rtt-ClusterId{value='63e715b403fd964f0e4f648e', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+2023-02-11 12:12:36.379  INFO 11008 --- [cluster-ClusterId{value='63e715b403fd964f0e4f648e', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+2023-02-11 12:12:36.379  INFO 11008 --- [cluster-ClusterId{value='63e715b403fd964f0e4f648e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14131600}
+2023-02-11 12:12:36.694  INFO 11008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 83 (http) with context path ''
+2023-02-11 12:12:36.703  INFO 11008 --- [main] com.example.ssmp.SsmpApplication         : Started SsmpApplication in 4.082 seconds (JVM running for 5.644)
+2023-02-11 12:50:22.797  INFO 11008 --- [http-nio-83-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-11 12:50:22.800  INFO 11008 --- [http-nio-83-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-11 12:50:22.821  INFO 11008 --- [http-nio-83-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2023-02-11 17:16:01.099  WARN 11008 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h50m55s669ms735µs401ns).
+2023-02-11 22:58:11.972  WARN 11008 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m6s510ms457µs).
+2023-02-11 23:55:07.760  WARN 11008 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m55s723ms809µs900ns).
